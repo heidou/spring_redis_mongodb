@@ -1,0 +1,38 @@
+spring:
+   profiles:
+     datasource:
+       driverClassName: com.mysql.jdbc.Driver
+       url: jdbc:mysql://106.14.166.45:3306/heidou?useUnicode=true&characterEncoding=GBK
+       username: root
+       password: 544027354
+       initialSize: 1
+       maxActive: 15
+       maxIdle: 16
+       maxWait: 30000
+       minEvictableIdleTimeMillis: 300000
+       minIdle: 10
+       numTestsPerEvictionRun: 3
+       testOnBorrow: false
+       validationQuery: select 'x'
+       testWhileIdle: true
+       timeBetweenEvictionRunsMillis: 10000
+
+     mybatis:
+       mapperLocation: classpath:mybatis/mapper/*.xml
+       typeAliasesPackage: com.heidou.model.BookDo
+
+   redis:
+        database: 0
+        host: 106.14.166.45
+        port: 6379
+        password:
+        pool.max-active: 8
+        pool.max-wait: -1
+        pool.max-idle: 8
+        pool.min-idle: 0
+        timeout: 0
+
+   data.mongodb:
+         host: 106.14.166.45
+         port: 27017
+         database: hd
